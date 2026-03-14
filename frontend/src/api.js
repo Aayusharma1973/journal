@@ -1,5 +1,4 @@
-const API = "http://localhost:5000/api/journal";
-
+const API = process.env.REACT_APP_API_URL || "http://localhost:5000/api/journal";
 export async function createEntry(userId, ambience, text) {
   const res = await fetch(`${API}`, {
     method: "POST",
